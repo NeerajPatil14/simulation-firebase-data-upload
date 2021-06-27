@@ -21,7 +21,7 @@ while res:
      cc=str(1234)
      print(cc)
      val=cc
-     firebase1 = firebase.FirebaseApplication('https://sensordata-a125f-default-rtdb.firebaseio.com/', None)
+     firebase1 = firebase.FirebaseApplication('url/', None)
      
      for i in range(0,4):
              string1="123"
@@ -31,7 +31,7 @@ while res:
                'reading':string1,
                'time': datetime.now().strftime("%H:%M")               
           }
-             result = firebase1.patch('https://sensordata-a125f-default-rtdb.firebaseio.com/'+ '/Temperature_data/'+ str(i), data)
+             result = firebase1.patch('url/'+ '/Temperature_data/'+ str(i), data)
              print(result)
      
 
@@ -43,7 +43,7 @@ while res:
                'reading':string2,
                'time': datetime.now().strftime("%H:%M")               
           }
-             result1 = firebase1.patch('https://sensordata-a125f-default-rtdb.firebaseio.com/'+ '/Humidity_data/'+ str(i), data1)
+             result1 = firebase1.patch('url/'+ '/Humidity_data/'+ str(i), data1)
              print(result1)
      res=0
 
